@@ -14,6 +14,10 @@ export interface GetProductResponse extends BaseServiceResponse {
   item: Product;
 }
 
+export interface GetProductResponse extends BaseServiceResponse {
+  item: Product;
+}
+
 export interface ProductPrice {
   currency: string;
   amount: number;
@@ -26,7 +30,9 @@ export interface Product {
   price: ProductPrice;
   picture: string;
   condition: string;
-  free_shipping: Boolean;
+  free_shipping: boolean;
   sold_quantity?: Number;
-  description?: String;
+  description?: string;
+  location?: string;
+  category?: string;
 }
